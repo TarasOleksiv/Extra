@@ -1,4 +1,4 @@
-package ua.goit.java8.module5.vehicles;
+package Module5.vehicles;
 
 /**
  * Created by t.oleksiv on 19/07/2017.

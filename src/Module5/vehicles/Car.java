@@ -1,7 +1,5 @@
-package ua.goit.java8.module5.vehicles;
+package Module5.vehicles;
 
-
-import ua.goit.java8.module5.Actions;
 
 /**
  * Created by t.oleksiv on 19/07/2017.
@@ -9,18 +7,18 @@ import ua.goit.java8.module5.Actions;
 public class Car {
 
     // class variables
-    private final int releaseDate;    //дата виробництва, не може бути змінена після створення об'єкта
-    private String engineType;      //тип двигуна
-    private int maxSpeed;       //максимальна швидкість для нової машини
-    private int runupTime;      //час розгону до 100км/год
-    private int totalNumberOfPassengers;    //вмістимість пасажирів
-    private int currentNumberOfPassengers;  //кількість пасажирів в поточний момент
-    private int currentSpeed;       //поточна швидкість
-    private CarDoor[] cardoors = new CarDoor[MAX_DOORS];     //масив з 4 дверей
-    private CarWheel[] carwheels = new CarWheel[MAX_WHEELS];      //масив з 10 коліс
-    private int wheelCounter;       //поточна кількість коліс на машині
-    private static final int MAX_DOORS = 4;     //максимальна кількість дверей
-    private static final int MAX_WHEELS = 10;     //максимальна кількість дверей
+    private final int releaseDate;                              //дата виробництва, не може бути змінена після створення об'єкта
+    private String engineType;                                  //тип двигуна
+    private int maxSpeed;                                       //максимальна швидкість для нової машини
+    private int runupTime;                                      //час розгону до 100км/год
+    private int totalNumberOfPassengers;                        //вмістимість пасажирів
+    private int currentNumberOfPassengers;                      //кількість пасажирів в поточний момент
+    private int currentSpeed;                                   //поточна швидкість
+    private CarDoor[] cardoors = new CarDoor[MAX_DOORS];        //масив з 4 дверей
+    private CarWheel[] carwheels = new CarWheel[MAX_WHEELS];    //масив з 10 коліс
+    private int wheelCounter;                                   //поточна кількість коліс на машині
+    private static final int MAX_DOORS = 4;                     //максимальна кількість дверей
+    private static final int MAX_WHEELS = 10;                   //максимальна кількість дверей
 
 
     // constructor1
@@ -176,11 +174,6 @@ public class Car {
 
     //вивести всю інфу на консоль
     public void showInfo(){
-        showInfoShort();
-        System.out.println("Поточна можлива максимальна швидкість: " + getCurrentMaxSpeed(getMinTireWheel()));
-    }
-
-    public void showInfoShort(){
         System.out.println("Дата виробництва машини: " + releaseDate);
         System.out.println("Тип двигуна: " + engineType);
         System.out.println("Максимальна швидкість нової машини: " + maxSpeed);
@@ -189,5 +182,6 @@ public class Car {
         System.out.println("Кількість пасажирів на даний момент: " + currentNumberOfPassengers);
         System.out.println("Поточна кількість коліс: " + wheelCounter);
         System.out.println("Поточна швидкість: " + currentSpeed);
+        System.out.println("Поточна можлива максимальна швидкість: " + getCurrentMaxSpeed(getMinTireWheel()));
     }
 }
